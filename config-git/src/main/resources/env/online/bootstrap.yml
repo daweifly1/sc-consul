@@ -1,0 +1,49 @@
+server:
+  port: 18006
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: dev                 # native 为本地配置
+  cloud:
+    consul:
+      host: ${CONSUL_HOST:localhost}
+      port: ${CONSUL_PORT:8500}
+      discovery:
+        prefer-ip-address: true
+#监控短点配置
+management:
+  security:
+    enabled: false
+  info:
+    git:
+      mode: full
+endpoints:
+  actuator:
+    enabled: true
+  shutdown:
+    enabled: false
+
+---
+spring:
+  profiles: dev
+  cloud:
+    config:
+      label: master
+      server:
+       git:
+         uri: https://gitee.com/chendawei/spring-cloud-config
+         search-paths: config
+         username: chendawei
+         password: BBBB
+         force-pull: true
+---
+spring:
+  profiles: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config/
+      fail-fast: true

@@ -36,7 +36,7 @@ spring:
          uri: https://gitee.com/chendawei/spring-cloud-config
          search-paths: config
          username: chendawei
-         password: wangyidan1
+         password: zzzzzzzz
          force-pull: true
 ---
 spring:

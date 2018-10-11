@@ -35,8 +35,8 @@ spring:
        git:
          uri: https://gitee.com/chendawei/spring-cloud-config
          search-paths: config
-         username: chendawei
-         password: wangyidan1
+         username: bbbbb
+         password: bbbbbb
          force-pull: true
 ---
 spring:

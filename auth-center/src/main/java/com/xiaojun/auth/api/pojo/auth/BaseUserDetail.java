@@ -1,6 +1,6 @@
 package com.xiaojun.auth.api.pojo.auth;
 
-import com.xiaojun.user.api.model.BaseUser;
+import com.xiaojun.rbac.api.model.BaseUser;
 import org.springframework.security.core.CredentialsContainer;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;

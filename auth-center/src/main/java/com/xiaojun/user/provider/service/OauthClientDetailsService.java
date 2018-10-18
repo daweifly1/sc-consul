@@ -1,7 +1,7 @@
-package com.xiaojun.user.provider.service;
+package com.xiaojun.rbac.provider.service;
 
 import com.xiaojun.db.service.BaseService;
-import com.xiaojun.user.api.model.OauthClientDetails;
+import com.xiaojun.rbac.api.model.OauthClientDetails;
 import org.springframework.stereotype.Service;
 
 

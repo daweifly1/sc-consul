@@ -1,4 +1,4 @@
-package com.xiaojun.user.api;
+package com.xiaojun.rbac.api;
 
 /**
  * Created by fp295 on 2018/4/9.

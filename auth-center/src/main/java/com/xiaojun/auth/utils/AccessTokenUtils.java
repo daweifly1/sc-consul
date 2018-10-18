@@ -1,9 +1,9 @@
 package com.xiaojun.auth.utils;
 
 import com.xiaojun.auth.api.pojo.Constant;
-import com.xiaojun.user.api.model.BaseModuleResources;
-import com.xiaojun.user.api.model.BaseRole;
-import com.xiaojun.user.api.model.BaseUser;
+import com.xiaojun.rbac.api.model.BaseModuleResources;
+import com.xiaojun.rbac.api.model.BaseRole;
+import com.xiaojun.rbac.api.model.BaseUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.access.AccessDeniedException;

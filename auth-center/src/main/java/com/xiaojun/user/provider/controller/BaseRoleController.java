@@ -1,4 +1,4 @@
-package com.xiaojun.user.provider.controller;
+package com.xiaojun.rbac.provider.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.xiaojun.auth.api.pojo.ResponseCode;
@@ -6,12 +6,12 @@ import com.xiaojun.common.pojo.ResponseData;
 import com.xiaojun.common.pojo.TableData;
 import com.xiaojun.common.utils.UUID;
 import com.xiaojun.db.controller.CrudController;
-import com.xiaojun.user.api.model.BaseRole;
-import com.xiaojun.user.api.model.BaseRoleModule;
-import com.xiaojun.user.api.pojo.request.BaseRoleRequest;
-import com.xiaojun.user.api.service.BaseRoleRemoteService;
-import com.xiaojun.user.provider.service.BaseRoleModuleService;
-import com.xiaojun.user.provider.service.BaseRoleService;
+import com.xiaojun.rbac.api.model.BaseRole;
+import com.xiaojun.rbac.api.model.BaseRoleModule;
+import com.xiaojun.rbac.api.pojo.request.BaseRoleRequest;
+import com.xiaojun.rbac.api.service.BaseRoleRemoteService;
+import com.xiaojun.rbac.provider.service.BaseRoleModuleService;
+import com.xiaojun.rbac.provider.service.BaseRoleService;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

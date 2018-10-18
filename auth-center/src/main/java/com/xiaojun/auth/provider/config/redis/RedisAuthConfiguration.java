@@ -1,8 +1,8 @@
 package com.xiaojun.auth.provider.config.redis;
 
 import com.xiaojun.auth.api.config.RedisObjectSerializer;
-import com.xiaojun.user.api.model.BaseModuleResources;
-import com.xiaojun.user.api.model.BaseRole;
+import com.xiaojun.rbac.api.model.BaseModuleResources;
+import com.xiaojun.rbac.api.model.BaseRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.xiaojun.user.provider.config;
+package com.xiaojun.rbac.provider.config;
 
 import com.xiaojun.common.constant.MqQueueConstant;
 import org.springframework.amqp.core.Queue;

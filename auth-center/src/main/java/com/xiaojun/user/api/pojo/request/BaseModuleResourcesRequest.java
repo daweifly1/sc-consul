@@ -1,4 +1,4 @@
-package com.xiaojun.user.api.pojo.request;
+package com.xiaojun.rbac.api.pojo.request;
 
 import com.xiaojun.common.pojo.BaseRequestPojo;
 

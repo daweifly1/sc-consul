@@ -1,8 +1,8 @@
-package com.xiaojun.user.api.service;
+package com.xiaojun.rbac.api.service;
 
 
 import com.xiaojun.common.pojo.ResponseData;
-import com.xiaojun.user.api.model.BaseUser;
+import com.xiaojun.rbac.api.model.BaseUser;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

@@ -1,4 +1,4 @@
-package com.xiaojun.user.provider.component;
+package com.xiaojun.rbac.provider.component;
 
 import com.xiaojun.common.constant.MqQueueConstant;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;

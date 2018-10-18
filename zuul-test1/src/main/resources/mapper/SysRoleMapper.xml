@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaojun.rbac.mapper.SysRoleMapper">
+    <select id="roleListPage" resultType="com.xiaojun.rbac.beans.dt.SysRole">
+        select a.id, a.name, a.remarks, a.create_time, b.really_name
+        from sys_role  a left join sys_user b
+        on a.create_user_id = b.id
+    </select>
+
+    <select id="findOneById" parameterType="int" resultType="com.xiaojun.rbac.beans.dt.SysRole">
+        select id, name, remarks from sys_role where id = #{id}
+    </select>
+
+    <update id="editRole" parameterType="map">
+        update sys_role set name = #{name}, remarks = #{remarks} where id = #{id}
+    </update>
+
+    <insert id="addRole" parameterType="com.xiaojun.rbac.beans.dt.SysRole" useGeneratedKeys="true" keyProperty="id">
+        insert into sys_role(name, remarks, create_user_id, create_time) values(#{name}, #{remarks}, #{createUserId}, now())
+    </insert>
+
+    <delete id="batchDel">
+        delete from sys_role where id in
+        <foreach item="item" collection="array" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+    <select id="findAll" resultType="com.xiaojun.rbac.beans.dt.SysRole">
+        select * from sys_role
+    </select>
+
+    <select id="findAllByUserId" parameterType="int" resultType="com.xiaojun.rbac.beans.dt.SysRole">
+        select * from sys_role where id in(
+            select role_id from sys_user_role where user_id = #{userId}
+        )
+    </select>
+</mapper>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaojun.rbac.mapper.SysUserMapper">
+    <select id="userListPage" resultType="com.xiaojun.rbac.beans.dt.SysUser">
+        select * from sys_user
+    </select>
+
+    <select id="findByUsername" parameterType="string" resultType="com.xiaojun.rbac.beans.dt.SysUser">
+        select * from sys_user where username = #{username}
+    </select>
+
+    <select id="findOneById" parameterType="int" resultType="com.xiaojun.rbac.beans.dt.SysUser">
+        select * from sys_user where id = #{id}
+    </select>
+
+    <update id="editUser" parameterType="com.xiaojun.rbac.beans.dt.SysUser">
+        update sys_user
+        set really_name=#{reallyName}, email=#{email}, mobile=#{mobile}, status=#{status}, update_time=now()
+        where id = #{id}
+    </update>
+
+    <insert id="addUser" parameterType="com.xiaojun.rbac.beans.dt.SysUser" useGeneratedKeys="true" keyProperty="id">
+        insert into sys_user(username, password, really_name, email, mobile, status, create_time)
+        values(#{username}, #{password}, #{reallyName}, #{email}, #{mobile}, #{status}, now())
+    </insert>
+
+    <delete id="batchDel">
+        delete from sys_user where id in
+        <foreach item="item" collection="array" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+</mapper>

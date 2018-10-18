@@ -1,14 +1,14 @@
-package com.xiaojun.user.provider.controller;
+package com.xiaojun.rbac.provider.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.xiaojun.auth.api.pojo.ResponseCode;
 import com.xiaojun.common.pojo.ResponseData;
 import com.xiaojun.common.pojo.TableData;
 import com.xiaojun.db.controller.CrudController;
-import com.xiaojun.user.api.model.OauthClientDetails;
-import com.xiaojun.user.api.pojo.request.OauthClientDetailsRequest;
-import com.xiaojun.user.api.service.BaseClientRemoteService;
-import com.xiaojun.user.provider.service.OauthClientDetailsService;
+import com.xiaojun.rbac.api.model.OauthClientDetails;
+import com.xiaojun.rbac.api.pojo.request.OauthClientDetailsRequest;
+import com.xiaojun.rbac.api.service.BaseClientRemoteService;
+import com.xiaojun.rbac.provider.service.OauthClientDetailsService;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

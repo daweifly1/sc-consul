@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    max-active: 100
+    min-evictable-idle-time-millis: 1800000
+    min-idle: 10
+    password: imooc
+    test-on-borrow: true
+    test-on-return: true
+    test-while-idle: true
+    url: jdbc:mysql://127.0.0.1:3306/imooc?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    username: imooc
+    validation-query: select 1
+  jpa:
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true

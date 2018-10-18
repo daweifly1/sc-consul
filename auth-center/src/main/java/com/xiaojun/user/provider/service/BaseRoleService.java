@@ -1,8 +1,8 @@
-package com.xiaojun.user.provider.service;
+package com.xiaojun.rbac.provider.service;
 
 import com.xiaojun.db.service.BaseService;
-import com.xiaojun.user.api.model.BaseRole;
-import com.xiaojun.user.provider.mapper.BaseRoleMapper;
+import com.xiaojun.rbac.api.model.BaseRole;
+import com.xiaojun.rbac.provider.mapper.BaseRoleMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

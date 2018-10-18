@@ -1,10 +1,10 @@
-package com.xiaojun.user.client;
+package com.xiaojun.rbac.client;
 
 import com.xiaojun.auth.api.pojo.ResponseCode;
 import com.xiaojun.common.pojo.ResponseData;
-import com.xiaojun.user.api.InterfaceService;
-import com.xiaojun.user.api.model.BaseRole;
-import com.xiaojun.user.api.service.BaseRoleRemoteService;
+import com.xiaojun.rbac.api.InterfaceService;
+import com.xiaojun.rbac.api.model.BaseRole;
+import com.xiaojun.rbac.api.service.BaseRoleRemoteService;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 

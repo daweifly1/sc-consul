@@ -1,4 +1,4 @@
-package com.xiaojun.user.api.model;
+package com.xiaojun.rbac.api.model;
 
 import javax.persistence.Column;
 import javax.persistence.Id;

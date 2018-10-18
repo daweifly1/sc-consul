@@ -1,4 +1,4 @@
-package com.xiaojun.user.api.pojo.response;
+package com.xiaojun.rbac.api.pojo.response;
 
 
 import java.util.List;

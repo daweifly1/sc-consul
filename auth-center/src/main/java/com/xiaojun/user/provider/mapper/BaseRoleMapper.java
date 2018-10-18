@@ -1,7 +1,7 @@
-package com.xiaojun.user.provider.mapper;
+package com.xiaojun.rbac.provider.mapper;
 
 
-import com.xiaojun.user.api.model.BaseRole;
+import com.xiaojun.rbac.api.model.BaseRole;
 import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.Mapper;
 

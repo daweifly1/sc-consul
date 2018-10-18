@@ -1,9 +1,9 @@
-package com.xiaojun.user.provider.service;
+package com.xiaojun.rbac.provider.service;
 
 import com.xiaojun.db.service.BaseService;
-import com.xiaojun.user.api.model.BaseSystem;
-import com.xiaojun.user.api.pojo.response.ModuleAndSystemResponse;
-import com.xiaojun.user.provider.mapper.BaseSystemMapper;
+import com.xiaojun.rbac.api.model.BaseSystem;
+import com.xiaojun.rbac.api.pojo.response.ModuleAndSystemResponse;
+import com.xiaojun.rbac.provider.mapper.BaseSystemMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

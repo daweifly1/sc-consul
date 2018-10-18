@@ -2,7 +2,6 @@ package com.xiaojun.core.util;
 
 import com.alibaba.fastjson.JSON;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.xiaojun.common.auth.entity.IUser;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.BeanUtils;
@@ -83,23 +82,6 @@ public class Utils {
             return principal;
         } catch (NullPointerException e) {
             log.error(e.toString());
-        }
-        return null;
-    }
-
-    /**
-     * 获取当前用户名
-     *
-     * @return
-     */
-    public static String getPrincipalUsername() {
-        Object principal = Utils.getPrincipal();
-        if (principal != null) {
-            if (IUser.class.isAssignableFrom(principal.getClass())) {
-                return ((IUser) principal).getUsername();
-            } else {
-                return principal.toString();
-            }
         }
         return null;
     }

@@ -3,7 +3,7 @@ package com.xiaojun.auth.api.token;
 import com.xiaojun.auth.api.pojo.Constant;
 import com.xiaojun.auth.api.pojo.auth.BaseUserDetail;
 import com.xiaojun.common.util.JsonUtils;
-import com.xiaojun.user.api.model.BaseUser;
+import com.xiaojun.rbac.api.model.BaseUser;
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;
 import org.springframework.security.oauth2.provider.OAuth2Authentication;

@@ -1,4 +1,4 @@
-package com.xiaojun.user.api.pojo;
+package com.xiaojun.rbac.api.pojo;
 
 public enum ResponseCode {
 

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaojun.rbac.mapper.SysPermissionMapper">
+    <select id="permissionListPage" parameterType="string" resultType="com.xiaojun.rbac.beans.dt.SysPermission">
+        select * from sys_permission
+        <where>
+            <if test="name!=null and name!=''">
+                and name like concat('%',#{name},'%')
+            </if>
+        </where>
+    </select>
+
+    <delete id="batchDel" parameterType="int">
+        delete from sys_permission where id in
+        <foreach item="item" collection="array" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+    <select id="havePermissionList" parameterType="int" resultType="com.xiaojun.rbac.beans.dt.SysPermission">
+        select id from sys_permission where id in
+        (select permission_id from sys_role_permission where role_id = #{roleId})
+    </select>
+
+    <insert id="addPermission" parameterType="com.xiaojun.rbac.beans.dt.SysPermission">
+        insert into sys_permission(name, url, type, parent_id, create_time)
+        values(#{name}, #{url}, #{type}, #{parentId}, now())
+    </insert>
+
+    <select id="findOneById" parameterType="int" resultType="com.xiaojun.rbac.beans.dt.SysPermission">
+        select * from sys_permission where id = #{id}
+    </select>
+
+    <update id="editPermission" parameterType="com.xiaojun.rbac.beans.dt.SysPermission">
+        update sys_permission set name=#{name}, url=#{url}, type=#{type}, parent_id=#{parentId} where id = #{id}
+    </update>
+
+    <select id="findAll" resultType="com.xiaojun.rbac.beans.dt.SysPermission">
+        select * from sys_permission
+    </select>
+
+    <select id="findAllByUserId" resultType="com.xiaojun.rbac.beans.dt.SysPermission">
+        select * from sys_permission where id in (
+            select permission_id from sys_role_permission where role_id in(
+            select role_id from sys_user_role where user_id = #{userId}
+            )
+        )
+    </select>
+</mapper>

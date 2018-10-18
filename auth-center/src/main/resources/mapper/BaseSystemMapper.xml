@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.xiaojun.user.provider.mapper.BaseSystemMapper" >
-  <resultMap id="BaseResultMap" type="com.xiaojun.user.api.model.BaseSystem" >
+<mapper namespace="com.xiaojun.rbac.provider.mapper.BaseSystemMapper" >
+  <resultMap id="BaseResultMap" type="com.xiaojun.rbac.api.model.BaseSystem" >
     <!--
       WARNING - @mbggenerated
     -->
@@ -14,14 +14,14 @@
     <result column="UPDATE_DATE" property="updateDate" jdbcType="TIMESTAMP" />
   </resultMap>
 
-  <resultMap id="ModuleAndSystemMap" type="com.xiaojun.user.api.pojo.response.ModuleAndSystemResponse" >
+  <resultMap id="ModuleAndSystemMap" type="com.xiaojun.rbac.api.pojo.response.ModuleAndSystemResponse" >
     <!--
       WARNING - @mbggenerated
     -->
     <id column="ID" property="id" jdbcType="VARCHAR" />
     <result column="SYSTEM_NAME" property="moduleName" jdbcType="VARCHAR" />
     <collection  column="{ID=ID}" property="subModules"
-                 select="com.xiaojun.user.provider.mapper.BaseModuleResourcesMapper.selectModuleAndSystemBySystemId" />
+                 select="com.xiaojun.rbac.provider.mapper.BaseModuleResourcesMapper.selectModuleAndSystemBySystemId" />
   </resultMap>
 
   <select id="selectModuleAndSystem" resultMap="ModuleAndSystemMap">

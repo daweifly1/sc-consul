@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xiaojun.rbac.mapper.SysUserRoleMapper">
+    <delete id="deleteRoleByUserId" parameterType="int">
+        delete from sys_user_role where user_id = #{userId}
+    </delete>
+
+    <delete id="deleteRoleByRoleId" parameterType="int">
+        delete from sys_user_role where role_id = #{roleId}
+    </delete>
+
+    <update id="assignRole" parameterType="map">
+        insert into sys_user_role(user_id, role_id) values
+        <foreach item="item" collection="roleIds" separator=",">
+            (#{userId}, #{item})
+        </foreach>
+    </update>
+</mapper>

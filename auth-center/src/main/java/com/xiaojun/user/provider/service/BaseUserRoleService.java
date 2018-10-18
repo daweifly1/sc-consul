@@ -1,8 +1,8 @@
-package com.xiaojun.user.provider.service;
+package com.xiaojun.rbac.provider.service;
 
 import com.xiaojun.common.utils.UUID;
 import com.xiaojun.db.service.BaseService;
-import com.xiaojun.user.api.model.BaseUserRole;
+import com.xiaojun.rbac.api.model.BaseUserRole;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

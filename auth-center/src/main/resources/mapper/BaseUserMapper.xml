@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.xiaojun.user.provider.mapper.BaseUserMapper" >
-  <resultMap id="BaseResultMap" type="com.xiaojun.user.api.model.BaseUser" >
+<mapper namespace="com.xiaojun.rbac.provider.mapper.BaseUserMapper" >
+  <resultMap id="BaseResultMap" type="com.xiaojun.rbac.api.model.BaseUser" >
     <!--
       WARNING - @mbggenerated
     -->

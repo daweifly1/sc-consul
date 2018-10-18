@@ -1,4 +1,4 @@
-package com.xiaojun.user.provider.controller;
+package com.xiaojun.rbac.provider.controller;
 
 import com.github.pagehelper.PageInfo;
 import com.xiaojun.auth.api.pojo.ResponseCode;
@@ -6,10 +6,10 @@ import com.xiaojun.common.pojo.ResponseData;
 import com.xiaojun.common.pojo.TableData;
 import com.xiaojun.common.utils.UUID;
 import com.xiaojun.db.controller.CrudController;
-import com.xiaojun.user.api.model.BaseSystem;
-import com.xiaojun.user.api.pojo.request.BaseSystemRequest;
-import com.xiaojun.user.api.pojo.response.ModuleAndSystemResponse;
-import com.xiaojun.user.provider.service.BaseSystemService;
+import com.xiaojun.rbac.api.model.BaseSystem;
+import com.xiaojun.rbac.api.pojo.request.BaseSystemRequest;
+import com.xiaojun.rbac.api.pojo.response.ModuleAndSystemResponse;
+import com.xiaojun.rbac.provider.service.BaseSystemService;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

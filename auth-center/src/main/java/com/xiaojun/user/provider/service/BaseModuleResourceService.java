@@ -1,8 +1,8 @@
-package com.xiaojun.user.provider.service;
+package com.xiaojun.rbac.provider.service;
 
 import com.xiaojun.db.service.BaseService;
-import com.xiaojun.user.api.model.BaseModuleResources;
-import com.xiaojun.user.provider.mapper.BaseModuleResourcesMapper;
+import com.xiaojun.rbac.api.model.BaseModuleResources;
+import com.xiaojun.rbac.provider.mapper.BaseModuleResourcesMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

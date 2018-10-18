@@ -1,0 +1,24 @@
+server:
+  port: 8080
+spring:
+  session:
+    store-type: none
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    max-active: 100
+    min-evictable-idle-time-millis: 1800000
+    min-idle: 10
+    password: imooc
+    test-on-borrow: true
+    test-on-return: true
+    test-while-idle: true
+    url: jdbc:mysql://127.0.0.1:3306/imooc?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    username: imooc
+    validation-query: select 1
+mybatis:
+  # 映射文件所在路径
+  mapper-locations: classpath:mapper/*.xml
+logging:
+  file: ${LOG_TEMP:./logs}/${spring.application.name}.log
+  level:
+    com.xiaojun: debug

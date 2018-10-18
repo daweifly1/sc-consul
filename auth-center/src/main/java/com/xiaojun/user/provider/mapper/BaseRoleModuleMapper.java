@@ -1,7 +1,7 @@
-package com.xiaojun.user.provider.mapper;
+package com.xiaojun.rbac.provider.mapper;
 
 
-import com.xiaojun.user.api.model.BaseRoleModule;
+import com.xiaojun.rbac.api.model.BaseRoleModule;
 import tk.mybatis.mapper.common.Mapper;
 
 import java.util.List;

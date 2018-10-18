@@ -1,7 +1,7 @@
-package com.xiaojun.user.api.pojo.request;
+package com.xiaojun.rbac.api.pojo.request;
 
 import com.xiaojun.common.pojo.BaseRequestPojo;
-import com.xiaojun.user.api.model.BaseModuleResources;
+import com.xiaojun.rbac.api.model.BaseModuleResources;
 
 import javax.persistence.Column;
 import javax.persistence.Id;

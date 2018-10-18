@@ -2,7 +2,7 @@ package com.xiaojun.auth.provider.config.web;
 
 import com.xiaojun.auth.api.pojo.ResponseCode;
 import com.xiaojun.common.pojo.ResponseData;
-import com.xiaojun.user.client.BaseClientService;
+import com.xiaojun.rbac.client.BaseClientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;

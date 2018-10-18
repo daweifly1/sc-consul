@@ -64,7 +64,7 @@ public class CommonSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .sessionManagement()
                 .invalidSessionStrategy(invalidSessionStrategy())
-                .maximumSessions(60 * 60 * 2)
+                .maximumSessions(1)
                 .maxSessionsPreventsLogin(true)
                 .expiredSessionStrategy(expiredSessionStrategy())
                 .and()

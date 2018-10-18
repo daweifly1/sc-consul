@@ -4,15 +4,15 @@ import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.xiaojun.rbac.beans.dt.SysPermission;
 import com.xiaojun.rbac.beans.dt.SysRole;
+import com.xiaojun.rbac.beans.rsp.exception.EasException;
+import com.xiaojun.rbac.beans.rsp.server.Pagenation;
+import com.xiaojun.rbac.beans.rsp.server.Response;
+import com.xiaojun.rbac.beans.vo.TreeNode;
 import com.xiaojun.rbac.mapper.SysPermissionMapper;
 import com.xiaojun.rbac.mapper.SysRoleMapper;
 import com.xiaojun.rbac.mapper.SysRolePermissionMapper;
 import com.xiaojun.rbac.mapper.SysUserRoleMapper;
-import com.xiaojun.rbac.beans.rsp.exception.EasException;
-import com.xiaojun.rbac.beans.rsp.server.Pagenation;
-import com.xiaojun.rbac.beans.rsp.server.Response;
 import com.xiaojun.rbac.service.ISysRoleService;
-import com.xiaojun.rbac.beans.vo.TreeNode;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Slf4j
 @Service
@@ -141,5 +143,26 @@ public class SysRoleServiceImpl implements ISysRoleService {
             }
         }
         return sysRoleList;
+    }
+
+    @Override
+    public Set<String> queryAllPermitions(List<SysRole> roles) {
+        int INIT = 2000;
+        Set<String> result = new HashSet<>(INIT);
+        // 所有权限
+        List<SysPermission> sysPermissionList = sysPermissionMapper.findAll();
+        Set<Integer> havePermissionList = new HashSet<>(INIT);
+        for (SysRole role : roles) {
+            List<SysPermission> ll = sysPermissionMapper.havePermissionList(role.getId());
+            for (int i = 0; i < ll.size() && null != ll; i++) {
+                havePermissionList.add(ll.get(i).getId());
+            }
+        }
+        for (SysPermission sysPermission : sysPermissionList) {
+            if (havePermissionList.contains(sysPermission.getId())) {
+                result.add(sysPermission.getUrl());
+            }
+        }
+        return result;
     }
 }

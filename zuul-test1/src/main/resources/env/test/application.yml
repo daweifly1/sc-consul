@@ -18,6 +18,18 @@ spring:
 mybatis:
   # 映射文件所在路径
   mapper-locations: classpath:mapper/*.xml
+
+jwt:
+  expiration: 10
+  header: Authorization
+  route:
+    authentication:
+      path: auth/login
+      refresh: auth/refresh
+      register: '"auth/register"'
+  secret: mySecret
+  tokenHead: Bearer
+
 logging:
   file: ${LOG_TEMP:./logs}/${spring.application.name}.log
   level:

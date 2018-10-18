@@ -18,7 +18,7 @@
     </delete>
 
     <select id="havePermissionList" parameterType="int" resultType="com.xiaojun.rbac.beans.dt.SysPermission">
-        select id from sys_permission where id in
+        select id,url from sys_permission where id in
         (select permission_id from sys_role_permission where role_id = #{roleId})
     </select>
 

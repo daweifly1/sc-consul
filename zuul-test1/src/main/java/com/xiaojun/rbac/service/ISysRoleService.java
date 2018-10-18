@@ -6,6 +6,7 @@ import com.xiaojun.rbac.beans.rsp.server.Response;
 import com.xiaojun.rbac.beans.vo.TreeNode;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Author: Mr.X
@@ -27,4 +28,6 @@ public interface ISysRoleService {
     Response batchDel(String ids);
 
     List<SysRole> findAllByUserId(Integer userId);
+
+    Set<String> queryAllPermitions(List<SysRole> roles);
 }
